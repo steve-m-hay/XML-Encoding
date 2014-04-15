@@ -1,4 +1,5 @@
 <encmap name='windows-1250' expat='yes'>
+  <ch byte='x80' uni='x20ac'/>
   <ch byte='x82' uni='x201a'/>
   <ch byte='x84' uni='x201e'/>
   <ch byte='x85' uni='x2026'/>
@@ -29,8 +30,7 @@
   <ch byte='xa5' uni='x0104'/>
   <range byte='xa6' len='4' uni='x00a6'/>
   <ch byte='xaa' uni='x015e'/>
-  <ch byte='xab' uni='x00ab'/>
-  <range byte='xad' len='2' uni='x00ad'/>
+  <range byte='xab' len='4' uni='x00ab'/>
   <ch byte='xaf' uni='x017b'/>
   <range byte='xb0' len='2' uni='x00b0'/>
   <ch byte='xb2' uni='x02db'/>

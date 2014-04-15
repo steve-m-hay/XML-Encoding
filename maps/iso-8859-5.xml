@@ -1,5 +1,5 @@
 <encmap name='ISO-8859-5' expat='yes'>
-  <ch byte='xa0' uni='x00a0'/>
+  <range byte='x80' len='33' uni='x0080'/>
   <range byte='xa1' len='12' uni='x0401'/>
   <ch byte='xad' uni='x00ad'/>
   <range byte='xae' len='66' uni='x040e'/>

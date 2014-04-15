@@ -1,5 +1,12 @@
 Revision history for Perl extension XML::Encoding.
 
+2.04 06 Sep 2008
+	- Incorporated a patch from Daniel Leidert <daniel.leidert@wgdd.de> which
+	  updates the maps iso-8859-2.xml to iso-8859-9.xml and adds the maps
+	  iso-8859-1.xml, iso-8859-10.xml, iso-8859-11.xml, iso-8859-13.xml to
+	  iso-8859-16.xml and windows-1251.xml.
+	- Updated the map windows-1250.xml and added the maps windows-1252.xml to
+	  windows-1258.xml using data from ftp://ftp.unicode.org/Public/MAPPINGS.
 2.03 08 Jul 2008
 	- Improved POD formatting of compile_encoding and make_encmap manual pages,
 	  courtesy of a patch from Daniel Leidert <daniel.leidert@wgdd.de>.

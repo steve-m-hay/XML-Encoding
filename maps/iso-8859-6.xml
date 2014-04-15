@@ -1,15 +1,5 @@
-<!-- If you wish to create an encoding map that expat can use from this,
-     change the name (perhaps "x-iso-8859-6"), comment out or delete
-     the bracketed section below, and add the attribute 'expat="yes"' to the
-     encmap start tag.
--->
-<encmap name='ISO-8859-6'>
-
-  <!-- This is what keeps ISO-8859-6 from being usable by expat -->
-  <range byte='x30' len='10' uni='x0660'/>
-  <!-- End -->
-
-  <ch byte='xa0' uni='x00a0'/>
+<encmap name='ISO-8859-6' expat='yes'>
+  <range byte='x80' len='33' uni='x0080'/>
   <ch byte='xa4' uni='x00a4'/>
   <ch byte='xac' uni='x060c'/>
   <ch byte='xad' uni='x00ad'/>
