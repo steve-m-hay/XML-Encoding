@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -w
+#!perl -w
 #
 # compile_encoding
 #
