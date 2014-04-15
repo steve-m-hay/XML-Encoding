@@ -1,9 +1,9 @@
 --- #YAML:1.0
 name:                XML-Encoding
-version:             2.01
+version:             2.02
 abstract:            A perl module for parsing XML encoding maps.
 license:             perl
-generated_by:        ExtUtils::MakeMaker version 6.32_01
+generated_by:        ExtUtils::MakeMaker version 6.32
 distribution_type:   module
 requires:     
     XML::Parser:                   2.18

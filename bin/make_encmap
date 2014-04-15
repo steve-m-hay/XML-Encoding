@@ -154,3 +154,43 @@ sub process_byte {
     if defined($rngstrt);
 
 }  # End process_byte
+
+__END__
+
+=head1 NAME
+
+make_encmap - create an XML representation from an Unicode mapping file
+
+=head1 SYNOPSIS
+
+    make_encmap name file
+
+=head1 DESCRIPTION
+
+B<make_encmap> creates a XML encmap file with a given name from an Unicode
+mapping file, received e.g. from F<ftp://ftp.unicode.org>. The result by default
+is output to F<stdout>.
+
+=head1 OPTIONS
+
+There are no options you can use.
+
+=head1 EXAMPLES
+
+The following example shows the usage of make_encmap for the ISO/IEC 8859-15
+table.
+
+    wget ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-15.TXT
+    make_encmap 8859-15 8859-15.TXT > 8859-15.encmap
+
+=head1 SEE ALSO
+
+L<compile_encoding(1)>,
+L<XML::Encoding(3pm)>.
+
+=head1 AUTHORS
+
+This manual page was written by Daniel Leidert E<lt>daniel.leidert@wgdd.deE<gt>
+for the Debian project (but may be used by others).
+
+=cut

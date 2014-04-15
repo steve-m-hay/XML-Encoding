@@ -290,6 +290,49 @@ sub range_set {
   return undef;
 }  # End range_set
 
+__END__
+
+=head1 NAME
+
+compile_encoding - compile XML encmap into a binary encoded file for XML::Parser
+
+=head1 SYNOPSIS
+
+    compile_encoding [-h] [-o output_file] input_file
+
+=head1 DESCRIPTION
+
+B<compile_encoding> compiles an input XML encmap file into a binary encoded file
+usable by L<XML::Parser|XML::Parser(3pm)>.
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<-o E<lt>output_fileE<gt>>
+
+Put compiled binary into given output file. By default, a file that has the same
+basename as the input file, but with an extension of F<.enc> is output.
+
+=item B<-h>
+
+Print usage information.
+
+=back
+
+=head1 SEE ALSO
+
+L<make_encmap(1)>,
+L<XML::Encoding(3pm)>,
+L<XML::Parser(3pm)>.
+
+=head1 AUTHORS
+
+This manual page was written by Daniel Leidert E<lt>daniel.leidert@wgdd.deE<gt>
+for the Debian project (but may be used by others).
+
+=cut
+
 # Tell Emacs that this is really a perl script
 # Local Variables:
 # mode:perl

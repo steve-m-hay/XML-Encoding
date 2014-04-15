@@ -1,5 +1,8 @@
 Revision history for Perl extension XML::Encoding.
 
+2.02 29 Jun 2008
+	- Added manual pages supplied by Daniel Leidert <daniel.leidert@wgdd.de>
+	  for compile_encoding and make_encmap.
 2.01 24 Jul 2007
 	- Fixed crash at end of test script when using perl-5.6.x. (The crash
 	  was actually due to a bug in perl that is fixed as of perl-5.8.0 at
