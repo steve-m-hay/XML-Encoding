@@ -3,6 +3,7 @@
 # make_encmap
 #
 # Copyright 1998 Clark Cooper
+# Changes in Version 2.00 onwards Copyright (C) 2009 Steve Hay
 # All rights reserved.
 #
 # This program is free software; you may redistribute it and/or
@@ -83,10 +84,9 @@ while (<MAP>) {
 
 close(MAP);
 
+die "Minpos never set" unless $minpos < 256;
 
 print "<encmap name='$name'>\n";
-
-die "Minpos never set" unless $minpos < 256;
 
 process_byte(2, $minpos, \@byte1);
 

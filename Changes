@@ -1,5 +1,8 @@
 Revision history for Perl extension XML::Encoding.
 
+2.06 20 Jan 2009
+	- Fixed make_encmap to avoid spurious output when there is an error with
+	  the input file. (Fixes [cpan #41854].)
 2.05 11 Sep 2008
 	- Changed the shebang line in the two scripts to be less specific. Thanks
 	  to Daniel Leidert <daniel.leidert@wgdd.de> for the suggestion.
