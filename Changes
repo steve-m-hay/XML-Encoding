@@ -1,5 +1,8 @@
 Revision history for Perl extension XML::Encoding.
 
+2.03 08 Jul 2008
+	- Improved POD formatting of compile_encoding and make_encmap manual pages,
+	  courtesy of a patch from Daniel Leidert <daniel.leidert@wgdd.de>.
 2.02 29 Jun 2008
 	- Added manual pages supplied by Daniel Leidert <daniel.leidert@wgdd.de>
 	  for compile_encoding and make_encmap.

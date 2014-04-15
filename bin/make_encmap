@@ -163,7 +163,7 @@ make_encmap - create an XML representation from an Unicode mapping file
 
 =head1 SYNOPSIS
 
-    make_encmap name file
+B<make_encmap> I<name> I<file>
 
 =head1 DESCRIPTION
 
@@ -177,16 +177,18 @@ There are no options you can use.
 
 =head1 EXAMPLES
 
-The following example shows the usage of make_encmap for the ISO/IEC 8859-15
+The following example shows the usage of B<make_encmap> for the ISO/IEC 8859-15
 table.
 
+B<
     wget ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-15.TXT
-    make_encmap 8859-15 8859-15.TXT > 8859-15.encmap
+    make_encmap 8859-15 8859-15.TXT E<gt> 8859-15.encmap
+>
 
 =head1 SEE ALSO
 
 L<compile_encoding(1)>,
-L<XML::Encoding(3pm)>.
+L<XML::Encoding(3pm)>
 
 =head1 AUTHORS
 

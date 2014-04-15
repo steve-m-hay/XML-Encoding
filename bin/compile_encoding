@@ -298,7 +298,7 @@ compile_encoding - compile XML encmap into a binary encoded file for XML::Parser
 
 =head1 SYNOPSIS
 
-    compile_encoding [-h] [-o output_file] input_file
+B<compile_encoding> [B<-h>] [B<-o> I<output_file>] I<input_file>
 
 =head1 DESCRIPTION
 
@@ -309,7 +309,7 @@ usable by L<XML::Parser|XML::Parser(3pm)>.
 
 =over 4
 
-=item B<-o E<lt>output_fileE<gt>>
+=item B<-o> I<output_file>
 
 Put compiled binary into given output file. By default, a file that has the same
 basename as the input file, but with an extension of F<.enc> is output.
@@ -324,7 +324,7 @@ Print usage information.
 
 L<make_encmap(1)>,
 L<XML::Encoding(3pm)>,
-L<XML::Parser(3pm)>.
+L<XML::Parser(3pm)>
 
 =head1 AUTHORS
 
