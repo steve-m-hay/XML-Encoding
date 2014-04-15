@@ -1,0 +1,11 @@
+<encmap name='ISO-8859-6'>
+  <range byte='x30' len='10' uni='x0660'/>
+  <ch byte='xa0' uni='x00a0'/>
+  <ch byte='xa4' uni='x00a4'/>
+  <ch byte='xac' uni='x060c'/>
+  <ch byte='xad' uni='x00ad'/>
+  <ch byte='xbb' uni='x061b'/>
+  <ch byte='xbf' uni='x061f'/>
+  <range byte='xc1' len='26' uni='x0621'/>
+  <range byte='xe0' len='19' uni='x0640'/>
+</encmap>

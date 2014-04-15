@@ -1,0 +1,23 @@
+Changes					Change log
+Encoding.pm				XML::Encoding module
+MANIFEST				This file
+Makefile.PL				ExtUtils::MakeMaker script
+README					A brief overview of the distribution
+bin/compile_encoding			script to make foo.enc from foo.xml
+bin/make_encmap				script to generate foo.xml
+encoding.h				Header file describing foo.enc format
+maps/IANA-assigned-character-sets	The name describe it
+maps/README				A word about how maps were generated
+maps/big5.xml				Big5 encoding map
+maps/encmap.dtd				Doctype declaration for encmap
+maps/iso-8859-2.xml			ISO-8859-2 encoding map
+maps/iso-8859-3.xml			ISO-8859-3 encoding map
+maps/iso-8859-4.xml			ISO-8859-4 encoding map
+maps/iso-8859-5.xml			ISO-8859-5 encoding map
+maps/iso-8859-6.xml			ISO-8859-6 encoding map
+maps/iso-8859-7.xml			ISO-8859-7 encoding map
+maps/iso-8859-8.xml			ISO-8859-8 encoding map
+maps/iso-8859-9.xml			ISO-8859-9 encoding map
+maps/shift_jis.xml			Shift_JIS encoding map
+maps/windows-1250.xml			cp1250-WinLatin2 encoding map
+test.pl					Test script

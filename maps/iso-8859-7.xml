@@ -1,0 +1,18 @@
+<encmap name='ISO-8859-7' expat='yes'>
+  <ch byte='xa0' uni='x00a0'/>
+  <ch byte='xa1' uni='x02bd'/>
+  <ch byte='xa2' uni='x02bc'/>
+  <ch byte='xa3' uni='x00a3'/>
+  <range byte='xa6' len='4' uni='x00a6'/>
+  <range byte='xab' len='3' uni='x00ab'/>
+  <ch byte='xaf' uni='x2015'/>
+  <range byte='xb0' len='4' uni='x00b0'/>
+  <range byte='xb4' len='3' uni='x0384'/>
+  <ch byte='xb7' uni='x00b7'/>
+  <range byte='xb8' len='3' uni='x0388'/>
+  <ch byte='xbb' uni='x00bb'/>
+  <ch byte='xbc' uni='x038c'/>
+  <ch byte='xbd' uni='x00bd'/>
+  <range byte='xbe' len='20' uni='x038e'/>
+  <range byte='xd3' len='44' uni='x03a3'/>
+</encmap>
