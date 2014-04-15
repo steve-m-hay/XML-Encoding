@@ -1,7 +1,8 @@
 ################################################################
 # XML::Encoding
 #
-# Copyright 1998 Clark Cooper <coopercc@netheaven.com>
+# Version 1.x Copyright 1998 Clark Cooper <coopercc@netheaven.com>
+# Version 2.x Copyright (C) 2007 Steve Hay
 # All rights reserved.
 #
 # This program is free software; you can redistribute it and/or
@@ -18,7 +19,7 @@ use strict;
 use vars qw(@ISA $VERSION);
 
 @ISA = qw(XML::Parser);
-$VERSION = '1.01';
+$VERSION = '2.00';
 
 sub new {
   my $class = shift;
@@ -165,7 +166,7 @@ sub check_range {
   # For 1 check individually.
 
   if ($len == 1) {
-    return if chr($start) =~ /[$@\\^`{}~']/;
+    return if chr($start) =~ /[\$@\\^`{}~']/;
   }
   elsif ($len == 2 and $start == 125) {
     return;
@@ -262,6 +263,9 @@ as the message string.
 =head1 AUTHOR
 
 Clark Cooper <F<coopercc@netheaven.com>>
+
+Steve Hay <F<shay@cpan.org>> is now maintaining XML::Encoding
+as of version 2.00
 
 =head1 SEE ALSO
 

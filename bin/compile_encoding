@@ -2,7 +2,8 @@
 #
 # compile_encoding
 #
-# Copyright 1998 Clark Cooper <coopercc@netheaven.com>
+# Version 1.x Copyright 1998 Clark Cooper <coopercc@netheaven.com>
+# Version 2.x Copyright (C) 2007 Steve Hay
 # All rights reserved.
 #
 # This program is free software; you may redistribute it and/or
@@ -32,7 +33,7 @@ use fields qw(min max map explen);
 sub new {
   my $class = shift;
   no strict 'refs';
-  my $pfxmap = [\%{"${class}::FIELDS"}];
+  my $pfxmap = fields::new($class);
 
   while (@_) {
     my $key = shift;

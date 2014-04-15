@@ -1,0 +1,14 @@
+--- #YAML:1.0
+name:                XML-Encoding
+version:             2.00
+abstract:            A perl module for parsing XML encoding maps.
+license:             perl
+generated_by:        ExtUtils::MakeMaker version 6.32_01
+distribution_type:   module
+requires:     
+    XML::Parser:                   2.18
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+author:
+    - Clark Cooper (coopercc@netheaven.com), Steve Hay (shay@cpan.org)

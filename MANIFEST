@@ -2,6 +2,7 @@ Changes					Change log
 Encoding.pm				XML::Encoding module
 MANIFEST				This file
 Makefile.PL				ExtUtils::MakeMaker script
+META.yml                                Module meta-data (added by MakeMaker)
 README					A brief overview of the distribution
 bin/compile_encoding			script to make foo.enc from foo.xml
 bin/make_encmap				script to generate foo.xml

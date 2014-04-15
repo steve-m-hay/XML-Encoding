@@ -1,5 +1,13 @@
 Revision history for Perl extension XML::Encoding.
 
+2.00 18 Jul 2007
+	- Fixed bin/compile_encoding to run with perl-5.9.x by using restricted
+	  hashes instead of pseudo-hashes (which have been removed from
+	  perl-5.9.x)
+	- Fixed accidental variable interpolation in Encoding.pm
+	- Fixed case of $ExtUtils::MakeMaker::VERSION in Makefile.PL so that
+	  ABSTRACT_FROM and AUTHOR get set when intended
+	- Added LICENSE to Makefile.PL
 1.01
 	- Added PREREQ_PM to Makefile.PL
 	- Added x-euc-jp-jisx0221 and x-euc-jp-unicode from

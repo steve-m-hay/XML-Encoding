@@ -1,6 +1,7 @@
 			XML::Encoding
 
-Copyright (c) 1998 Clark Cooper <coopercc@netheaven.com>
+Version 1.x Copyright (c) 1998 Clark Cooper <coopercc@netheaven.com>
+Version 2.x Copyright (C) 2007 Steve Hay
 All rights reserved.
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself. 

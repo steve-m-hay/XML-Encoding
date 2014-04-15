@@ -4,9 +4,13 @@ use ExtUtils::MakeMaker;
 
 push(@extras,
      ABSTRACT_FROM => 'Encoding.pm',
-     AUTHOR        => 'Clark Cooper (coopercc@netheaven.com)')
-    if ($ExtUtils::MakeMaker::Version >= 5.4301);
+     AUTHOR        => 'Clark Cooper (coopercc@netheaven.com), Steve Hay (shay@cpan.org)')
+    if ($ExtUtils::MakeMaker::VERSION >= 5.4301);
      
+push(@extras,
+     LICENSE       => 'perl')
+    if ($ExtUtils::MakeMaker::VERSION >= 6.3001);
+
 WriteMakefile(
               NAME	   => 'XML::Encoding',
               dist         => {COMPRESS => 'gzip', SUFFIX => '.gz'},
