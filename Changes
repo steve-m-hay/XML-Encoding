@@ -1,5 +1,11 @@
 Revision history for Perl extension XML::Encoding.
 
+2.01 24 Jul 2007
+	- Fixed crash at end of test script when using perl-5.6.x. (The crash
+	  was actually due to a bug in perl that is fixed as of perl-5.8.0 at
+	  least, so the test script is simply modified to not tickle that bug.)
+	- Clarified the copyright notices. Only the *changes* in version 2.x are
+	  my copyright.
 2.00 18 Jul 2007
 	- Fixed bin/compile_encoding to run with perl-5.9.x by using restricted
 	  hashes instead of pseudo-hashes (which have been removed from

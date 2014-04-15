@@ -91,11 +91,18 @@ print "ok 6\n";
 
 $doc1 =~ s/='32'/='200'/;
 
-eval {$p->parse($doc1);};
-
-my $err = $@;
-
-unless ($err and $err =~ /^Len plus byte > 256/) {
-  print "not ";
+# Don't use an eval {} here to trap the parse() error
+# because it causes a crash under perl-5.6.x
+{
+local $SIG{__DIE__} = sub {
+  my $err = $_[0];
+  unless ($err and $err =~ /^Len plus byte > 256/) {
+    print "not ";
+  }
+  print "ok 7\n";
+  exit;
+};
+$p->parse($doc1);
 }
-print "ok 7\n";
+
+print "not ok 7\n";
