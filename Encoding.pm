@@ -19,7 +19,7 @@ use strict;
 use vars qw(@ISA $VERSION);
 
 @ISA = qw(XML::Parser);
-$VERSION = '2.06';
+$VERSION = '2.07';
 
 sub new {
   my $class = shift;
@@ -258,7 +258,7 @@ This will be 1 for the "ch" element. An undef value should be returned if
 successful. If in expat mode, a defined value causes an error and is used
 as the message string.
 
-=over
+=back
 
 =head1 AUTHOR
 

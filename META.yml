@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                XML-Encoding
-version:             2.06
+version:             2.07
 abstract:            A perl module for parsing XML encoding maps.
 license:             perl
 author:              
