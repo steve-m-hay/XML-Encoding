@@ -1,5 +1,9 @@
 Revision history for Perl extension XML::Encoding.
 
+2.08 20 Sep 2010
+	- Changed test script to use Test::More, renamed it to test.t and moved
+	  it into the t/ folder. (Fixes [cpan #61369].)
+	- Moved the perl module into the lib/ folder.
 2.07 29 Jan 2009
 	- Minor correction to POD from Daniel Leidert <daniel.leidert@wgdd.de>.
 2.06 20 Jan 2009

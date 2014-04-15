@@ -2,7 +2,7 @@
 # XML::Encoding
 #
 # Version 1.x Copyright 1998 Clark Cooper <coopercc@netheaven.com>
-# Changes in Version 2.00 onwards Copyright (C) 2007-2009 Steve Hay
+# Changes in Version 2.00 onwards Copyright (C) 2007-2010 Steve Hay
 # All rights reserved.
 #
 # This program is free software; you can redistribute it and/or
@@ -19,7 +19,7 @@ use strict;
 use vars qw(@ISA $VERSION);
 
 @ISA = qw(XML::Parser);
-$VERSION = '2.07';
+$VERSION = '2.08';
 
 sub new {
   my $class = shift;

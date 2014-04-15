@@ -1,5 +1,4 @@
 Changes					Change log
-Encoding.pm				XML::Encoding module
 MANIFEST				This file
 Makefile.PL				ExtUtils::MakeMaker script
 META.yml                                Module meta-data (added by MakeMaker)
@@ -7,6 +6,7 @@ README					A brief overview of the distribution
 bin/compile_encoding			script to make foo.enc from foo.xml
 bin/make_encmap				script to generate foo.xml
 encoding.h				Header file describing foo.enc format
+lib/XML/Encoding.pm			XML::Encoding module
 maps/IANA-assigned-character-sets	The name describes it
 maps/Japanese_Encodings.msg		Message about Japanese encodings
 maps/README				A word about how maps were generated
@@ -48,4 +48,4 @@ maps/x-sjis-cp932.xml			x-sjis-cp932 encoding map
 maps/x-sjis-jdk117.xml			x-sjis-jdk117 encoding map
 maps/x-sjis-jisx0221.xml		x-sjis-jisx0221 encoding map
 maps/x-sjis-unicode.xml			x-sjis-unicode encoding map
-test.pl					Test script
+t/test.t				Test script
