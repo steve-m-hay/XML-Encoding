@@ -5,7 +5,7 @@
 # Copyright 1998 Clark Cooper <coopercc@netheaven.com>
 # All rights reserved.
 #
-# This program is free software; you can redistribute it and/or
+# This program is free software; you may redistribute it and/or
 # modify it under the same terms as Perl itself.
 
 
@@ -288,7 +288,6 @@ sub range_set {
 
   return undef;
 }  # End range_set
-
 
 # Tell Emacs that this is really a perl script
 # Local Variables:

@@ -1,5 +1,12 @@
 Revision history for Perl extension XML::Encoding.
 
+1.01
+	- Added PREREQ_PM to Makefile.PL
+	- Added x-euc-jp-jisx0221 and x-euc-jp-unicode from
+	  Yoshida Masato <yoshidam@inse.co.jp> to maps
+	- With the advice of MURATA Makoto <murata@apsdc.ksp.fujixerox.co.jp>,
+	  removed the Shift_JIS encoding and replaced it with 4 variations
+	  he provided. He also provided an explanatory message.
 1.00  Sun Dec 13 13:43:31 EST 1998
 	- original version; created by h2xs 1.18
 

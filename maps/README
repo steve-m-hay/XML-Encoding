@@ -30,8 +30,34 @@ So although I have a map for ISO-8859-6 here, it is not an expat mode
 map, since it encodes the ASCII digits to their Arabic-Indic equivalents
 (U+0660 - U+0669).
 
-Clark Cooper
-Novembar 28, 1998
+This distribution contains four contributed encodings from MURATA Makoto
+<murata@apsdc.ksp.fujixerox.co.jp> that are variations on the encoding
+commonly called Shift_JIS:
 
+x-sjis-cp932.xml
+x-sjis-jdk117.xml
+x-sjis-jisx0221.xml
+x-sjis-unicode.xml	(This is the same encoding as the shift_jis.xml that
+			 was distributed with this module in version 1.00)
+
+Please read his message (Japanese_Encodings.msg) about why these are here
+and why I've removed the shift_jis.xml encoding.
+
+We also have two contributed encodings that are variations of the EUC-JP
+encoding from Yoshida Masato <yoshidam@inse.co.jp>:
+
+x-euc-jp-jisx0221.xml
+x-euc-jp-unicode.xml
+
+
+The comments that MURATA Makoto made in his message apply to these
+encodings too.
+
+I've taken the liberty of breaking out common sections for these two as
+external entities. So the fault of the uninformative names of these
+four external entites is mine.
+
+Clark Cooper
+December 26, 1998
 
 

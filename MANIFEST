@@ -6,7 +6,8 @@ README					A brief overview of the distribution
 bin/compile_encoding			script to make foo.enc from foo.xml
 bin/make_encmap				script to generate foo.xml
 encoding.h				Header file describing foo.enc format
-maps/IANA-assigned-character-sets	The name describe it
+maps/IANA-assigned-character-sets	The name describes it
+maps/Japanese_Encodings.msg		Message about Japanese encodings
 maps/README				A word about how maps were generated
 maps/big5.xml				Big5 encoding map
 maps/encmap.dtd				Doctype declaration for encmap
@@ -18,6 +19,17 @@ maps/iso-8859-6.xml			ISO-8859-6 encoding map
 maps/iso-8859-7.xml			ISO-8859-7 encoding map
 maps/iso-8859-8.xml			ISO-8859-8 encoding map
 maps/iso-8859-9.xml			ISO-8859-9 encoding map
-maps/shift_jis.xml			Shift_JIS encoding map
+maps/kana-and-kanji.ent			external entity used by x-sjis-*.xml
+maps/oem.ent				external entity used by x-sjis-*.xml
 maps/windows-1250.xml			cp1250-WinLatin2 encoding map
+maps/x-euc-jp-jisx0221.xml		x-euc-jp-jisx0221 encoding map
+maps/x-euc-jp-part1.ent			external entity used by x-euc-jp-*.xml
+maps/x-euc-jp-part2.ent			external entity used by x-euc-jp-*.xml
+maps/x-euc-jp-part3.ent			external entity used by x-euc-jp-*.xml
+maps/x-euc-jp-part4.ent			external entity used by x-euc-jp-*.xml
+maps/x-euc-jp-unicode.xml		x-euc-jp-unicode encoding map
+maps/x-sjis-cp932.xml			x-sjis-cp932 encoding map
+maps/x-sjis-jdk117.xml			x-sjis-jdk117 encoding map
+maps/x-sjis-jisx0221.xml		x-sjis-jisx0221 encoding map
+maps/x-sjis-unicode.xml			x-sjis-unicode encoding map
 test.pl					Test script

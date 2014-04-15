@@ -8,10 +8,11 @@ push(@extras,
     if ($ExtUtils::MakeMaker::Version >= 5.4301);
      
 WriteMakefile(
-              NAME	=> 'XML::Encoding',
-              dist      => {COMPRESS => 'gzip', SUFFIX => '.gz'},
-              VERSION_FROM => 'Encoding.pm',
-	      EXE_FILES => [qw(bin/compile_encoding bin/make_encmap)],
+              NAME	   => 'XML::Encoding',
+              dist         => {COMPRESS => 'gzip', SUFFIX => '.gz'},
+	      VERSION_FROM => 'Encoding.pm',
+	      PREREQ_PM    => {XML::Parser => 2.18},
+	      EXE_FILES    => [qw(bin/compile_encoding bin/make_encmap)],
 	      @extras
              );
 
