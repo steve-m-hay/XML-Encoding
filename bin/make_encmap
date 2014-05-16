@@ -10,6 +10,8 @@
 # modify it under the same terms as Perl itself.
 #
 
+use 5.008001;
+
 my $name = shift;
 my $file = shift;
 

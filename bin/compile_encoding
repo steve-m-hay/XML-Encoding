@@ -10,7 +10,7 @@
 # modify it under the same terms as Perl itself.
 
 
-require 5.005;
+use 5.008001;
 
 my $Usage=<<'End_of_Usage;';
 Usage is:

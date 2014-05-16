@@ -13,6 +13,8 @@
 
 package XML::Encoding;
 
+use 5.008001;
+
 use XML::Parser;
 
 use strict;

@@ -1,5 +1,17 @@
 Revision history for Perl extension XML::Encoding.
 
+2.09 TODO
+        - Uploaded source code to GitHub and included repository URLS in meta
+          data.
+        - Included META.json file in addition to META.yml.
+        - Set minimum required ExtUtils::MakeMaker version to 6.64 to ensure
+          that all parameters used are supported, to save jumping through hoops
+          to support earlier versions.  (This should not be a problem since
+          ExtUtils::MakeMaker 6.64 is easily installed into Perl 5.8.1 and
+          above, that being the whole point of the new choice of minimum
+          supported Perl version.)
+        - Set minimum required Perl version to 5.8.1.  This is in line with the
+          minimum requirement of the "Perl Toolchain".
 2.08 20 Sep 2010
 	- Changed test script to use Test::More, renamed it to test.t and moved
 	  it into the t/ folder. (Fixes [cpan #61369].)
