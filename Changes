@@ -1,8 +1,8 @@
 Revision history for Perl extension XML::Encoding.
 
 2.09 TODO
-        - Uploaded source code to GitHub and included repository URLS in meta
-          data.
+        - Uploaded source code to GitHub and included repository URLs in
+          metadata.
         - Included META.json file in addition to META.yml.
         - Set minimum required ExtUtils::MakeMaker version to 6.64 to ensure
           that all parameters used are supported, to save jumping through hoops
