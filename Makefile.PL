@@ -41,11 +41,7 @@ MAIN: {
             },
 
             resources => {
-                repository => {
-                    type => 'git',
-                    url  => 'git://github.com/steve-m-hay/XML-Encoding.git',
-                    web  => 'https://github.com/steve-m-hay/XML-Encoding'
-                }
+                repository => 'https://github.com/steve-m-hay/XML-Encoding'
             }
         },
 
