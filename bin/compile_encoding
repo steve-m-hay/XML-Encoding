@@ -19,12 +19,12 @@ Usage is:
 Compiles the input XML encmap file into a binary encoding file usable
 by XML::Parser.
 
-  -h			Print this message.
+  -h                    Print this message.
 
-  -o output_file	Put compiled binary into given output file. By
-			default, a file that has the same basename as
-			the input file, but with an extension of .enc
-			is the output.
+  -o output_file        Put compiled binary into given output file. By
+                        default, a file that has the same basename as
+                        the input file, but with an extension of .enc
+                        is the output.
 End_of_Usage;
 
 package Pfxmap;
@@ -102,11 +102,11 @@ my $pfxlenref;
 my $currmap = new Pfxmap(min => 255, max => 0, map => \@firstbyte);
 
 my $p = new XML::Encoding(ErrorContext  => 2,
-			  ExpatRequired => 1,
-			  PushPrefixFcn => \&push_prefix,
-			  PopPrefixFcn  => \&pop_prefix,
-			  RangeSetFcn   => \&range_set
-			  );
+                          ExpatRequired => 1,
+                          PushPrefixFcn => \&push_prefix,
+                          PopPrefixFcn  => \&pop_prefix,
+                          RangeSetFcn   => \&range_set
+                          );
 
 my $name = $p->parsefile($infile);
 
@@ -130,7 +130,7 @@ for ($i = 0; $i < 256; $i++) {
     if ($pfxcount) {
       $currmap->{map}->[$i] = $firstbyte[$i];
       $firstbyte[$i] = - ($firstbyte[$i]->{explen} + 1)
-	if ref($firstbyte[$i]);
+        if ref($firstbyte[$i]);
     }
   }
   else {
@@ -144,7 +144,7 @@ binmode(ENC);
 #Note the use of network order packings
 
 print ENC pack("Na${namelength}nnN256",
-	       $magic, $name, $pflen, $maplen, @firstbyte);
+               $magic, $name, $pflen, $maplen, @firstbyte);
 
 my @map = ();
 my $head = 0;
@@ -165,13 +165,13 @@ while (@prefixes) {
 
     if (defined($entry)) {
       if (ref($entry)) {
-	my $pfxent = $entry;
-	$entry = $head + @prefixes;
-	push(@prefixes, $pfxent);
-	vec($ispfx, $i, 1) = 1;
+        my $pfxent = $entry;
+        $entry = $head + @prefixes;
+        push(@prefixes, $pfxent);
+        vec($ispfx, $i, 1) = 1;
       }
       else {
-	vec($ischar, $i, 1) = 1;
+        vec($ischar, $i, 1) = 1;
       }
     }
     else {
@@ -203,8 +203,8 @@ sub push_prefix {
 
   return "Different lengths for same first byte"
     if (defined($pfxlenref)
-	and defined($$pfxlenref)
-	and $$pfxlenref < @stack);
+        and defined($$pfxlenref)
+        and $$pfxlenref < @stack);
 
   my $pfxmap = $currmap->{map}->[$byte];
 
@@ -266,7 +266,7 @@ sub range_set {
   if (defined($pfxlenref)) {
     if (defined($$pfxlenref)) {
       return "Different for same 1st byte"
-	unless $$pfxlenref == @stack;
+        unless $$pfxlenref == @stack;
     }
     else {
       $$pfxlenref = @stack;

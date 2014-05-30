@@ -1,4 +1,4 @@
-			XML::Encoding
+                        XML::Encoding
 
 Version 1.x Copyright (c) 1998 Clark Cooper <coopercc@netheaven.com>
 Changes in Version 2.00 onwards Copyright (C) 2007-2010 Steve Hay
@@ -18,9 +18,9 @@ Several encoding maps are included in the maps subdirectory.
 There is nothing to build, but to test and install you need to do the
 following:
 
-	perl Makefile.PL
-	make test
-	make install
+        perl Makefile.PL
+        make test
+        make install
 
 Clark Cooper
 December 12, 1998

@@ -47,21 +47,21 @@ while (<MAP>) {
 
   if ($flen == 2) {
     if ($f1val < 128) {
-	next if $f1val == $toval;
+        next if $f1val == $toval;
 
-	warn "The byte '0x$f1' mapped to 0x$to\n"
-	  unless defined($Exceptions{$f1val});
+        warn "The byte '0x$f1' mapped to 0x$to\n"
+          unless defined($Exceptions{$f1val});
       }
-		      
+
     if (defined($byte1[$f1val])) {
       die "Multiple mappings for 0x$f1val: $to & " . sprintf("0x%x",
-							     $byte1[$f1val])
-	if ($byte1[$f1val] != $toval);
+                                                             $byte1[$f1val])
+        if ($byte1[$f1val] != $toval);
     }
     else {
       $byte1[$f1val] = $toval;
       $minpos = $f1val
-	if $f1val < $minpos;
+        if $f1val < $minpos;
     }
   }
   else {
@@ -69,12 +69,12 @@ while (<MAP>) {
 
     if (defined($b1)) {
       die "The 1st byte of '$from' overlaps a single byte definition."
-	unless ref($b1);
+        unless ref($b1);
     }
     else {
       $b1 = $byte1[$f1val] = [];
       $minpos = $f1val
-	if $f1val < $minpos;
+        if $f1val < $minpos;
     }
 
     my $f2 = substr($from, 2, 2);
@@ -108,7 +108,7 @@ sub emit {
   }
   else {
     printf("$pre<range byte='x%02x' len='%d' uni='x%04x'/>\n",
-	   $start, $len, $val);
+           $start, $len, $val);
   }
 }  # End emit
 
@@ -126,27 +126,27 @@ sub process_byte {
   
     if (defined($v)) {
       if (ref($v)) {
-	emit($prefix, $rngstrt, $i, $rngval)
-	  if defined($rngstrt);
+        emit($prefix, $rngstrt, $i, $rngval)
+          if defined($rngstrt);
 
-	$rngstrt = undef;
-	printf "$prefix<prefix byte='x%02x'>\n", $i;
-	process_byte($lead + 2, 0, $v);
-	print "$prefix</prefix>\n";
+        $rngstrt = undef;
+        printf "$prefix<prefix byte='x%02x'>\n", $i;
+        process_byte($lead + 2, 0, $v);
+        print "$prefix</prefix>\n";
       }
       else {
-	next if (defined($rngstrt) and ($v - $rngval == $i - $rngstrt));
+        next if (defined($rngstrt) and ($v - $rngval == $i - $rngstrt));
 
-	emit($prefix, $rngstrt, $i, $rngval)
-	  if defined($rngstrt);
+        emit($prefix, $rngstrt, $i, $rngval)
+          if defined($rngstrt);
 
-	$rngstrt = $i;
-	$rngval = $v;
+        $rngstrt = $i;
+        $rngval = $v;
       }
     }
     else {
       emit($prefix, $rngstrt, $i, $rngval)
-	if defined($rngstrt);
+        if defined($rngstrt);
 
       $rngstrt = undef;
     }

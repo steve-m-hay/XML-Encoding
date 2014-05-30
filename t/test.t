@@ -48,8 +48,8 @@ End_of_doc;
 my @exprng = (0xa0, 0x3000, 6, 0x41, 0x0753, 1, 0x50, 0x0400, 32);
 
 my $p = new XML::Encoding(PushPrefixFcn => \&pushpfx,
-			  PopPrefixFcn  => \&poppfx,
-			  RangeSetFcn   => \&range);
+                          PopPrefixFcn  => \&poppfx,
+                          RangeSetFcn   => \&range);
 
 my $name = $p->parse($doc);
 

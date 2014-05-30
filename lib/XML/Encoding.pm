@@ -48,14 +48,14 @@ sub start {
     {
       my $byte = $attr{byte};
       $exp->xpcroak("Missing required byte attribute")
-	unless defined($byte);
+        unless defined($byte);
 
       $byte = cnvnumatt($exp, $byte, 'byte');
       $exp->xpcroak("byte attribute > 255") if $byte > 255;
 
       my $uni = $attr{uni};
       $exp->xpcroak("Missing required uni attribute")
-	unless defined($uni);
+        unless defined($uni);
 
       $uni = cnvnumatt($exp, $uni, 'uni');
       $exp->xpcroak("uni attribute > 0xFFFF") if $uni > 0xFFFF;
@@ -63,25 +63,25 @@ sub start {
       my $len = 1;
 
       if ($el eq 'range') {
-	$len = $attr{len};
-	$exp->xpcroak("Missing required len attribute")
-	  unless defined($len);
+        $len = $attr{len};
+        $exp->xpcroak("Missing required len attribute")
+          unless defined($len);
 
-	$len = cnvnumatt($exp, $len, 'len');
-	$exp->xpcroak("Len plus byte > 256") if ($len + $byte) > 256;
+        $len = cnvnumatt($exp, $len, 'len');
+        $exp->xpcroak("Len plus byte > 256") if ($len + $byte) > 256;
       }
 
       check_range($exp, $byte, $len, $uni)
-	if ($xpmode
-	    and $byte < 128
-	    and $byte != $uni
-	    and not $exp->in_element('prefix'));
+        if ($xpmode
+            and $byte < 128
+            and $byte != $uni
+            and not $exp->in_element('prefix'));
 
       my $range_set_fcn = $exp->{RangeSetFcn};
       if (defined $range_set_fcn) {
-	my $result = &$range_set_fcn($byte, $uni, $len);
-	$exp->xpcroak($result)
-	  if ($xpmode and $result);
+        my $result = &$range_set_fcn($byte, $uni, $len);
+        $exp->xpcroak($result)
+          if ($xpmode and $result);
       }
     }
   elsif ($el eq 'prefix') {
@@ -98,7 +98,7 @@ sub start {
     if (defined $push_pfx_fcn) {
       my $result = &$push_pfx_fcn($byte);
       $exp->xpcroak($result)
-	if ($xpmode and $result);
+        if ($xpmode and $result);
     }
   }
   elsif ($el eq 'encmap') {
@@ -112,7 +112,7 @@ sub start {
     my $expat = $attr{expat};
     if (defined($expat)) {
       $exp->xpcroak("Value of expat attribute should be yes or no")
-	unless ($expat eq 'yes' or $expat eq 'no');
+        unless ($expat eq 'yes' or $expat eq 'no');
       $exp->{EN_ExpatMode} = $expat eq 'yes';
     }
     else {
@@ -146,7 +146,7 @@ sub end {
     if (defined $pop_pfx_fcn) {
       my $result = &$pop_pfx_fcn();
       $exp->xpcroak($result)
-	if ($xpmode and $result);
+        if ($xpmode and $result);
     }
   }
 }  # End end
