@@ -21,7 +21,7 @@ use strict;
 use vars qw(@ISA $VERSION);
 
 @ISA = qw(XML::Parser);
-$VERSION = '2.09';
+$VERSION = '2.10';
 
 sub new {
   my $class = shift;
