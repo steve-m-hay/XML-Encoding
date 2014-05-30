@@ -1,6 +1,6 @@
 Revision history for Perl extension XML::Encoding.
 
-2.09 TODO
+2.09 30 May 2014
         - Uploaded source code to GitHub and included repository URLs in
           metadata.
         - Included META.json file in addition to META.yml.
