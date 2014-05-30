@@ -73,10 +73,10 @@ MAIN: {
             'vars'        => '0'
         },
 
-	EXE_FILES => [qw(
-	    bin/compile_encoding
-	    bin/make_encmap
-	)],
+        EXE_FILES => [qw(
+            bin/compile_encoding
+            bin/make_encmap
+        )],
 
         dist => {
             PREOP   => 'find $(DISTVNAME) -type d -print|xargs chmod 0755 && ' .
