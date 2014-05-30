@@ -41,7 +41,10 @@ MAIN: {
             },
 
             resources => {
-                repository => 'https://github.com/steve-m-hay/XML-Encoding'
+                repository => {
+                    type => 'git',
+                    url  => 'https://github.com/steve-m-hay/XML-Encoding.git'
+                }
             }
         },
 
@@ -49,22 +52,25 @@ MAIN: {
 
         CONFIGURE_REQUIRES => {
             'ExtUtils::MakeMaker' => '6.64',
-            'strict'              => 0,
-            'warnings'            => 0
+            'perl'                => '5.008001',
+            'strict'              => '0',
+            'warnings'            => '0'
         },
 
         TEST_REQUIRES => {
-            'Test::More'          => 0,
-            'strict'              => 0,
-            'warnings'            => 0
+            'Test::More' => '0',
+            'perl'       => '5.008001',
+            'strict'     => '0',
+            'warnings'   => '0'
         },
 
         PREREQ_PM => {
-            'XML::Parser'         => '2.18',
-            'fields'              => 0,
-            'integer'             => 0,
-            'strict'              => 0,
-            'vars'                => 0
+            'XML::Parser' => '2.18',
+            'fields'      => '0',
+            'integer'     => '0',
+            'perl'        => '5.008001',
+            'strict'      => '0',
+            'vars'        => '0'
         },
 
 	EXE_FILES => [qw(
@@ -73,8 +79,8 @@ MAIN: {
 	)],
 
         dist => {
-            PREOP   => 'find $(DISTVNAME) -type f -print|xargs chmod 0644 && ' .
-                       'find $(DISTVNAME) -type d -print|xargs chmod 0755 && ' .
+            PREOP   => 'find $(DISTVNAME) -type d -print|xargs chmod 0755 && ' .
+                       'find $(DISTVNAME) -type f -print|xargs chmod 0644 && ' .
                        'chmod 0755 $(DISTVNAME)/bin/*',
             TO_UNIX => 'find $(DISTVNAME) -type f -print|xargs dos2unix'
         }
