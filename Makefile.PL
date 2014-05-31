@@ -58,17 +58,13 @@ MAIN: {
         },
 
         TEST_REQUIRES => {
-            'Test::More' => '0',
-            'perl'       => '5.008001',
-            'strict'     => '0',
-            'warnings'   => '0'
+            'Test::More' => '0'
         },
 
         PREREQ_PM => {
             'XML::Parser' => '2.18',
             'fields'      => '0',
             'integer'     => '0',
-            'perl'        => '5.008001',
             'strict'      => '0',
             'vars'        => '0'
         },
