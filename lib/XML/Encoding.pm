@@ -18,10 +18,10 @@ use 5.008001;
 use XML::Parser;
 
 use strict;
-use vars qw(@ISA $VERSION);
+use warnings;
 
-@ISA = qw(XML::Parser);
-$VERSION = '2.10';
+our @ISA = qw(XML::Parser);
+our $VERSION = '2.10';
 
 sub new {
   my $class = shift;

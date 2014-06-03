@@ -1,4 +1,4 @@
-#!perl -w
+#!perl
 #
 # compile_encoding
 #
@@ -11,6 +11,9 @@
 
 
 use 5.008001;
+
+use strict;
+use warnings;
 
 my $Usage=<<'End_of_Usage;';
 Usage is:
@@ -32,7 +35,7 @@ use fields qw(min max map explen);
 
 sub new {
   my $class = shift;
-  no strict 'refs';
+  no strict 'refs'; ## no critic (TestingAndDebugging::ProhibitNoStrict)
   my $pfxmap = fields::new($class);
 
   while (@_) {
@@ -47,8 +50,6 @@ package main;
 
 use XML::Encoding;
 use integer;
-
-use strict;
 
 ################################################################
 # See the encoding.h file in the top level XML::Encoding directory
@@ -138,13 +139,14 @@ for ($i = 0; $i < 256; $i++) {
   }
 }
 
-open(ENC, ">$ofile") or die "Couldn't open $ofile for writing:\n$!\n";
-binmode(ENC);
+my $enc;
+open($enc, '>', $ofile) or die "Couldn't open $ofile for writing:\n$!\n";
+binmode($enc);
 
 #Note the use of network order packings
 
-print ENC pack("Na${namelength}nnN256",
-               $magic, $name, $pflen, $maplen, @firstbyte);
+print $enc pack("Na${namelength}nnN256",
+                $magic, $name, $pflen, $maplen, @firstbyte);
 
 my @map = ();
 my $head = 0;
@@ -181,15 +183,15 @@ while (@prefixes) {
     push(@map, $entry);
   }
 
-  print ENC pack('CCn', $pfxmap->{min}, $len, $mapstart), $ispfx, $ischar;
+  print $enc pack('CCn', $pfxmap->{min}, $len, $mapstart), $ispfx, $ischar;
 }
 
 if (@map) {
   my $packlist = 'n' . int(@map);
-  print ENC pack($packlist, @map);
+  print $enc pack($packlist, @map);
 }
 
-close(ENC);
+close($enc);
 
 ################
 ## End main
@@ -236,7 +238,7 @@ sub push_prefix {
 
   push(@stack, $currmap);
   $currmap = $pfxmap;
-  return undef;
+  return;
 }  # End push_prefix
 
 sub pop_prefix {
@@ -253,7 +255,7 @@ sub pop_prefix {
   $currmap = pop(@stack);
   $pfxlenref = undef
     unless @stack;
-  return undef;
+  return;
 }  # End pop_prefix
 
 sub range_set {
@@ -287,7 +289,7 @@ sub range_set {
   $currmap->{max} = $limit - 1
     if $limit >= $currmap->{max};
 
-  return undef;
+  return;
 }  # End range_set
 
 __END__

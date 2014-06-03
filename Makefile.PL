@@ -66,7 +66,7 @@ MAIN: {
             'fields'      => '0',
             'integer'     => '0',
             'strict'      => '0',
-            'vars'        => '0'
+            'warnings'    => '0'
         },
 
         EXE_FILES => [qw(

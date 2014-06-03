@@ -1,4 +1,4 @@
-#!perl -w
+#!perl
 #
 # make_encmap
 #
@@ -11,6 +11,9 @@
 #
 
 use 5.008001;
+
+use strict;
+use warnings;
 
 my $name = shift;
 my $file = shift;
@@ -25,12 +28,13 @@ foreach (unpack('c*', $except_str)) {
 die "Usage is:\n\tmake_encmap name file\n"
   unless (defined($name) and defined($file));
 
-open(MAP, $file) or die "Couldn't open $file";
+my $map;
+open($map, '<', $file) or die "Couldn't open $file";
 
 my @byte1;
 my $minpos = 256;
 
-while (<MAP>) {
+while (<$map>) {
   next if /^\#/;
 
   next unless /0x([\da-f]{2,4})\s+0x([\da-f]{4})\s*\#\s*(.*)\s*$/i;
@@ -84,7 +88,7 @@ while (<MAP>) {
   }
 }
 
-close(MAP);
+close($map);
 
 die "Minpos never set" unless $minpos < 256;
 
