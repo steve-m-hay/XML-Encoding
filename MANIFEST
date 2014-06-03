@@ -1,5 +1,6 @@
 Changes                                  Change log
 MANIFEST                                 This file
+MANIFEST.SKIP                            Manifest skip specs
 Makefile.PL                              ExtUtils::MakeMaker script
 README                                   A brief overview of the distribution
 bin/compile_encoding                     script to make foo.enc from foo.xml
