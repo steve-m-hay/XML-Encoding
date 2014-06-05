@@ -2,7 +2,8 @@
 # XML::Encoding
 #
 # Version 1.x Copyright 1998 Clark Cooper <coopercc@netheaven.com>
-# Changes in Version 2.00 onwards Copyright (C) 2007-2010 Steve Hay
+# All rights reserved.
+# Changes in Version 2.00 onwards Copyright (C) 2007-2010, 2014 Steve Hay.
 # All rights reserved.
 #
 # This program is free software; you can redistribute it and/or
@@ -264,9 +265,9 @@ as the message string.
 
 =head1 AUTHOR
 
-Clark Cooper <F<coopercc@netheaven.com>>
+Clark Cooper E<lt>F<coopercc@netheaven.com>E<gt>
 
-Steve Hay <F<shay@cpan.org>> is now maintaining XML::Encoding
+Steve Hay E<lt>F<shay@cpan.org>E<gt> is now maintaining XML::Encoding
 as of version 2.00
 
 =head1 SEE ALSO
