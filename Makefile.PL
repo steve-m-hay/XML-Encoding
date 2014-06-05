@@ -45,6 +45,19 @@ MAIN: {
                     type => 'git',
                     url  => 'https://github.com/steve-m-hay/XML-Encoding.git'
                 }
+            },
+
+            optional_features => {
+                podtest => {
+                    description => 'POD testing',
+                    prereqs => {
+                        test => {
+                            requires => {
+                                'Test::Pod' => '1.00'
+                            }
+                        }
+                    }
+                }
             }
         },
 
