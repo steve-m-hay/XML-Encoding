@@ -48,5 +48,6 @@ maps/x-sjis-cp932.xml                    x-sjis-cp932 encoding map
 maps/x-sjis-jdk117.xml                   x-sjis-jdk117 encoding map
 maps/x-sjis-jisx0221.xml                 x-sjis-jisx0221 encoding map
 maps/x-sjis-unicode.xml                  x-sjis-unicode encoding map
+t/critic.t                               Test script
 t/pod.t                                  Test script
 t/test.t                                 Test script

@@ -2,6 +2,7 @@ Revision history for Perl extension XML::Encoding.
 
 2.10 TODO
         - Added optional POD testing.
+        - Added optional Perl::Critic testing.
         - Made code Perl::Critic clean.
         - Simplified Makefile.PL requirements.
 2.09 30 May 2014
