@@ -50,4 +50,5 @@ maps/x-sjis-jisx0221.xml                 x-sjis-jisx0221 encoding map
 maps/x-sjis-unicode.xml                  x-sjis-unicode encoding map
 t/critic.t                               Test script
 t/pod.t                                  Test script
+t/pod_coverage.t                         Test script
 t/test.t                                 Test script
