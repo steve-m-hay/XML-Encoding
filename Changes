@@ -1,6 +1,7 @@
 Revision history for Perl extension XML::Encoding.
 
 2.10 TODO
+        - Made Perl Critic, Pod and Pod Coverage tests skip unless AUTHOR_TESTING.
         - Added optional POD coverage testing.
         - Added optional POD testing.
         - Added optional Perl::Critic testing.
