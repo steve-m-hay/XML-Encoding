@@ -52,8 +52,8 @@ Revision history for Perl distribution XML-Encoding
 
 2.05 2008-09-11
 
-    - Changed the shebang line in the two scripts to be less specific.  Thanks
-      to Daniel Leidert <daniel.leidert@wgdd.de> for the suggestion.
+    - Changed the shebang line in the two scripts to be less specific.  [Daniel
+      Leidert <daniel.leidert@wgdd.de>]
 
 2.04 2008-09-06
 
@@ -104,9 +104,8 @@ Revision history for Perl distribution XML-Encoding
     - Added x-euc-jp-jisx0221 and x-euc-jp-unicode to maps.  [Yoshida Masato
       <yoshidam@inse.co.jp>]
 
-    - With the advice of MURATA Makoto <murata@apsdc.ksp.fujixerox.co.jp>,
-      removed the Shift_JIS encoding and replaced it with four variations he
-      provided.  He also provided an explanatory message.
+    - Removed the Shift_JIS encoding and replaced it with four variations and an
+      explanatory message.  [MURATA Makoto <murata@apsdc.ksp.fujixerox.co.jp>]
 
 1.00 1998-12-13 13:43:31-05:00
 
