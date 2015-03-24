@@ -6,8 +6,9 @@
 # Changes in Version 2.00 onwards Copyright (C) 2007-2010, 2014 Steve Hay.
 # All rights reserved.
 #
-# This program is free software; you can redistribute it and/or
-# modify it under the same terms as Perl itself.
+# This module is free software; you can redistribute it and/or modify it under
+# the same terms as Perl itself, i.e. under the terms of either the GNU General
+# Public License or the Artistic License, as specified in the LICENCE file.
 #
 # See pod documentation at the end of the file
 #
@@ -269,6 +270,12 @@ Clark Cooper E<lt>F<coopercc@netheaven.com>E<gt>
 
 Steve Hay E<lt>F<shay@cpan.org>E<gt> is now maintaining XML::Encoding
 as of version 2.00
+
+=head1 LICENCE
+
+This module is free software; you can redistribute it and/or modify it under the
+same terms as Perl itself, i.e. under the terms of either the GNU General Public
+License or the Artistic License, as specified in the F<LICENCE> file.
 
 =head1 SEE ALSO
 
