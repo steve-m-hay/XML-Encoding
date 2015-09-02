@@ -18,12 +18,5 @@ at ftp://ftp.unicode.org/Public/MAPPINGS.
 
 Several encoding maps are included in the maps subdirectory.
 
-There is nothing to build, but to test and install you need to do the
-following:
-
-        perl Makefile.PL
-        make test
-        make install
-
 Clark Cooper
 December 12, 1998
