@@ -1,9 +1,8 @@
                         XML::Encoding
 
-Version 1.x Copyright (c) 1998 Clark Cooper <coopercc@netheaven.com>
-All rights reserved.
-Changes in Version 2.00 onwards Copyright (C) 2007-2010, 2014 Steve Hay.
-All rights reserved.
+Copyright (C) 1998 Clark Cooper.  All rights reserved.
+Copyright (C) 2007-2010, 2014 Steve Hay.  All rights reserved.
+
 This distribution is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself, i.e. under the terms of either the GNU
 General Public License or the Artistic License, as specified in the LICENCE

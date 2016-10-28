@@ -2,10 +2,8 @@
 #
 # make_encmap
 #
-# Version 1.x Copyright 1998 Clark Cooper
-# All rights reserved.
-# Changes in Version 2.00 onwards Copyright (C) 2008-2009, 2014 Steve Hay.
-# All rights reserved.
+# Copyright (C) 1998 Clark Cooper.  All rights reserved.
+# Copyright (C) 2008-2009, 2014 Steve Hay.  All rights reserved.
 #
 # This script is free software; you can redistribute it and/or modify it under
 # the same terms as Perl itself, i.e. under the terms of either the GNU General
@@ -200,8 +198,14 @@ L<XML::Encoding(3pm)>
 
 =head1 AUTHORS
 
-This manual page was written by Daniel Leidert E<lt>daniel.leidert@wgdd.deE<gt>
-for the Debian project (but may be used by others).
+Clark Cooper E<lt>F<coopercc@netheaven.com>E<gt>.
+
+Steve Hay E<lt>F<shay@cpan.org>E<gt> is now maintaining XML::Encoding as of
+version 2.00.
+
+This manual page was written by Daniel Leidert
+E<lt>F<daniel.leidert@wgdd.de>E<gt> for the Debian project (but may be used by
+others).
 
 =head1 LICENCE
 

@@ -1,10 +1,8 @@
 ################################################################
 # XML::Encoding
 #
-# Version 1.x Copyright 1998 Clark Cooper <coopercc@netheaven.com>
-# All rights reserved.
-# Changes in Version 2.00 onwards Copyright (C) 2007-2010, 2014 Steve Hay.
-# All rights reserved.
+# Copyright (C) 1998 Clark Cooper.  All rights reserved.
+# Copyright (C) 2007-2010, 2014 Steve Hay.  All rights reserved.
 #
 # This module is free software; you can redistribute it and/or modify it under
 # the same terms as Perl itself, i.e. under the terms of either the GNU General
@@ -266,10 +264,10 @@ as the message string.
 
 =head1 AUTHOR
 
-Clark Cooper E<lt>F<coopercc@netheaven.com>E<gt>
+Clark Cooper E<lt>F<coopercc@netheaven.com>E<gt>.
 
-Steve Hay E<lt>F<shay@cpan.org>E<gt> is now maintaining XML::Encoding
-as of version 2.00
+Steve Hay E<lt>F<shay@cpan.org>E<gt> is now maintaining XML::Encoding as of
+version 2.00.
 
 =head1 LICENCE
 
