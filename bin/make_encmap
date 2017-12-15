@@ -198,14 +198,14 @@ L<XML::Encoding(3pm)>
 
 =head1 AUTHORS
 
-Clark Cooper E<lt>F<coopercc@netheaven.com>E<gt>.
+Clark Cooper E<lt>L<coopercc@netheaven.com|mailto:coopercc@netheaven.com>E<gt>.
 
-Steve Hay E<lt>F<shay@cpan.org>E<gt> is now maintaining XML::Encoding as of
-version 2.00.
+Steve Hay E<lt>L<shay@cpan.org|mailto:shay@cpan.org>E<gt> is now maintaining
+XML::Encoding as of version 2.00.
 
 This manual page was written by Daniel Leidert
-E<lt>F<daniel.leidert@wgdd.de>E<gt> for the Debian project (but may be used by
-others).
+E<lt>L<daniel.leidert@wgdd.de|mailto:daniel.leidert@wgdd.de>E<gt> for the Debian
+project (but may be used by others).
 
 =head1 LICENCE
 

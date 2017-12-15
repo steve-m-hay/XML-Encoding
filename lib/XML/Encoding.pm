@@ -264,10 +264,10 @@ as the message string.
 
 =head1 AUTHOR
 
-Clark Cooper E<lt>F<coopercc@netheaven.com>E<gt>.
+Clark Cooper E<lt>L<coopercc@netheaven.com|mailto:coopercc@netheaven.com>E<gt>.
 
-Steve Hay E<lt>F<shay@cpan.org>E<gt> is now maintaining XML::Encoding as of
-version 2.00.
+Steve Hay E<lt>L<shay@cpan.org|mailto:shay@cpan.org>E<gt> is now maintaining
+XML::Encoding as of version 2.00.
 
 =head1 LICENCE
 
