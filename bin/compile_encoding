@@ -68,16 +68,20 @@ while (defined($ARGV[0]) and $ARGV[0] =~ /^-/) {
   }
   elsif ($opt eq '-h') {
     print $Usage;
-    exit;
+    exit 1;
   }
   else {
+    $! = 2;
     die "Unrecognized option: $opt\n$Usage";
   }
 }
 
 my $infile = shift;
 
-die "Encmap XML file not provided\n$Usage" unless defined($infile);
+if (not defined($infile)) {
+  $! = 3;
+  die "Encmap XML file not provided\n$Usage";
+}
 
 unless (defined($ofile)) {
   my $base = $infile;
@@ -111,8 +115,11 @@ my $p = new XML::Encoding(ErrorContext  => 2,
 
 my $name = $p->parsefile($infile);
 
-die "Encoding name too long (> $namelength)\n"
-  if length($name) > $namelength;
+
+if (length($name) > $namelength) {
+  $! = 4;
+  die "Encoding name too long (> $namelength)\n";
+}
 
 my @prefixes;
 my $maplen = 0;
@@ -140,7 +147,10 @@ for ($i = 0; $i < 256; $i++) {
 }
 
 my $enc;
-open($enc, '>', $ofile) or die "Couldn't open $ofile for writing:\n$!\n";
+open($enc, '>', $ofile) or do {
+  $! = 5;
+  die "Couldn't open $ofile for writing:\n$!\n";
+};
 binmode($enc);
 
 #Note the use of network order packings
@@ -192,6 +202,8 @@ if (@map) {
 }
 
 close($enc);
+
+exit 0;
 
 ################
 ## End main
@@ -300,21 +312,31 @@ compile_encoding - compile XML encmap into a binary encoded file for XML::Parser
 
 =head1 SYNOPSIS
 
-B<compile_encoding> [B<-h>] [B<-o> I<output_file>] I<input_file>
+    compile_encoding [-h] [-o <output_file>] <input_file>
 
 =head1 DESCRIPTION
 
 B<compile_encoding> compiles an input XML encmap file into a binary encoded file
 usable by L<XML::Parser|XML::Parser(3pm)>.
 
+=head1 ARGUMENTS
+
+=over 4
+
+=item E<lt>input_fileE<gt>
+
+The XML encmap file to compile.
+
+=back
+
 =head1 OPTIONS
 
 =over 4
 
-=item B<-o> I<output_file>
+=item B<-o E<lt>output_fileE<gt>>
 
-Put compiled binary into given output file. By default, a file that has the same
-basename as the input file, but with an extension of F<.enc> is output.
+Put compiled binary into given output file.  By default, a file that has the
+same basename as the input file, but with an extension of F<.enc> is output.
 
 =item B<-h>
 
@@ -322,13 +344,27 @@ Print usage information.
 
 =back
 
+=head1 EXIT STATUS
+
+    0   The script exited normally.
+
+    1   The script exited after printing the help.
+
+    2   Invalid command-line arguments.
+
+    >2  An error occurred.
+
+=head1 KNOWN BUGS
+
+I<None>.
+
 =head1 SEE ALSO
 
 L<make_encmap(1)>,
 L<XML::Encoding(3pm)>,
-L<XML::Parser(3pm)>
+L<XML::Parser(3pm)>.
 
-=head1 AUTHORS
+=head1 AUTHOR
 
 Clark Cooper E<lt>L<coopercc@netheaven.com|mailto:coopercc@netheaven.com>E<gt>.
 
@@ -339,11 +375,28 @@ This manual page was written by Daniel Leidert
 E<lt>L<daniel.leidert@wgdd.de|mailto:daniel.leidert@wgdd.de>E<gt> for the Debian
 project (but may be used by others).
 
+=head1 COPYRIGHT
+
+Copyright (C) 1998 Clark Cooper.  All rights reserved.
+Copyright (C) 2007-2008, 2014 Steve Hay.  All rights reserved.
+
 =head1 LICENCE
 
 This script is free software; you can redistribute it and/or modify it under the
 same terms as Perl itself, i.e. under the terms of either the GNU General Public
 License or the Artistic License, as specified in the F<LICENCE> file.
+
+=head1 VERSION
+
+Version 2.10
+
+=head1 DATE
+
+TODO
+
+=head1 HISTORY
+
+See the F<Changes> file.
 
 =cut
 

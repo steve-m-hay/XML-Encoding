@@ -201,14 +201,14 @@ XML::Encoding - A perl module for parsing XML encoding maps.
 
 =head1 SYNOPSIS
 
-  use XML::Encoding;
-  my $em_parser = new XML::Encoding(ErrorContext  => 2,
-                                    ExpatRequired => 1,
-                                    PushPrefixFcn => \&push_prefix,
-                                    PopPrefixFcn  => \&pop_prefix,
-                                    RangeSetFcn   => \&range_set);
+    use XML::Encoding;
+    my $em_parser = new XML::Encoding(ErrorContext  => 2,
+                                      ExpatRequired => 1,
+                                      PushPrefixFcn => \&push_prefix,
+                                      PopPrefixFcn  => \&pop_prefix,
+                                      RangeSetFcn   => \&range_set);
 
-  my $encmap_name = $em_parser->parsefile($ARGV[0]);
+    my $encmap_name = $em_parser->parsefile($ARGV[0]);
 
 =head1 DESCRIPTION
 
@@ -219,7 +219,7 @@ returns the name of the encoding map (obtained from the name attribute of
 the root element). The contents of the map are processed through the
 callback functions push_prefix, pop_prefix, and range_set.
 
-=head1 METHODS
+=head2 Methods
 
 This module provides no additional methods to those provided by XML::Parser,
 but it does take the following additional options.
@@ -262,6 +262,60 @@ as the message string.
 
 =back
 
+=head1 EXPORTS
+
+I<None>.
+
+=head1 KNOWN BUGS
+
+I<None>.
+
+=head1 FEEDBACK
+
+Patches, bug reports, suggestions or any other feedback is welcome.
+
+Patches can be sent as GitHub pull requests at
+L<https://github.com/steve-m-hay/XML-Encoding/pulls>.
+
+Bug reports and suggestions can be made on the CPAN Request Tracker at
+L<https://rt.cpan.org/Public/Bug/Report.html?Queue=XML-Encoding>.
+
+Currently active requests on the CPAN Request Tracker can be viewed at
+L<https://rt.cpan.org/Public/Dist/Display.html?Status=Active;Queue=XML-Encoding>.
+
+Please test this distribution.  See CPAN Testers Reports at
+L<http://www.cpantesters.org/> for details of how to get involved.
+
+Previous test results on CPAN Testers Reports can be viewed at
+L<http://www.cpantesters.org/distro/X/XML-Encoding.html>.
+
+Please rate this distribution on CPAN Ratings at
+L<http://cpanratings.perl.org/rate/?distribution=XML-Encoding>.
+
+=head1 SEE ALSO
+
+L<XML::Parser>.
+
+=head1 AVAILABILITY
+
+The latest version of this module is available from CPAN (see
+L<perlmodlib/"CPAN"> for details) at
+
+L<https://metacpan.org/release/XML-Encoding> or
+
+L<http://search.cpan.org/dist/XML-Encoding/> or
+
+L<http://www.cpan.org/authors/id/S/SH/SHAY/> or
+
+L<http://www.cpan.org/modules/by-module/XML/>.
+
+The latest source code is available from GitHub at
+L<https://github.com/steve-m-hay/XML-Encoding>.
+
+=head1 INSTALLATION
+
+See the F<INSTALL> file.
+
 =head1 AUTHOR
 
 Clark Cooper E<lt>L<coopercc@netheaven.com|mailto:coopercc@netheaven.com>E<gt>.
@@ -269,14 +323,28 @@ Clark Cooper E<lt>L<coopercc@netheaven.com|mailto:coopercc@netheaven.com>E<gt>.
 Steve Hay E<lt>L<shay@cpan.org|mailto:shay@cpan.org>E<gt> is now maintaining
 XML::Encoding as of version 2.00.
 
+=head1 COPYRIGHT
+
+Copyright (C) 1998 Clark Cooper.  All rights reserved.
+
+Copyright (C) 2007-2010, 2014 Steve Hay.  All rights reserved.
+
 =head1 LICENCE
 
 This module is free software; you can redistribute it and/or modify it under the
 same terms as Perl itself, i.e. under the terms of either the GNU General Public
 License or the Artistic License, as specified in the F<LICENCE> file.
 
-=head1 SEE ALSO
+=head1 VERSION
 
-XML::Parser
+Version 2.10
+
+=head1 DATE
+
+TODO
+
+=head1 HISTORY
+
+See the F<Changes> file.
 
 =cut

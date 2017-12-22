@@ -25,11 +25,16 @@ foreach (unpack('c*', $except_str)) {
   $Exceptions{$_} = 1;
 }
 
-die "Usage is:\n\tmake_encmap name file\n"
-  unless (defined($name) and defined($file));
+if (not defined($name) or not defined($file)) {
+  $! = 2;
+  die "Usage is:\n\tmake_encmap name file\n";
+}
 
 my $map;
-open($map, '<', $file) or die "Couldn't open $file";
+open($map, '<', $file) or do {
+  $! = 3;
+  die "Couldn't open $file";
+};
 
 my @byte1;
 my $minpos = 256;
@@ -42,8 +47,10 @@ while (<$map>) {
   my ($from, $to, $name) = ($1, $2, $3);
 
   my $flen = length($from);
-  die "Bad line at $., from must be either 2 or 4 digits:\n$_"
-    if $flen == 3;
+  if ($flen == 3) {
+    $! = 4;
+    die "Bad line at $., from must be either 2 or 4 digits:\n$_";
+  }
 
   my $toval = hex($to);
   my $f1 = substr($from, 0, 2);
@@ -58,9 +65,11 @@ while (<$map>) {
       }
 
     if (defined($byte1[$f1val])) {
-      die "Multiple mappings for 0x$f1val: $to & " . sprintf("0x%x",
-                                                             $byte1[$f1val])
-        if ($byte1[$f1val] != $toval);
+      if ($byte1[$f1val] != $toval) {
+        $! = 5;
+        die "Multiple mappings for 0x$f1val: $to & " . sprintf("0x%x",
+                                                             $byte1[$f1val]);
+      }
     }
     else {
       $byte1[$f1val] = $toval;
@@ -72,8 +81,10 @@ while (<$map>) {
     my $b1 = $byte1[$f1val];
 
     if (defined($b1)) {
-      die "The 1st byte of '$from' overlaps a single byte definition."
-        unless ref($b1);
+      if (not ref($b1)) {
+        $! = 6;
+        die "The 1st byte of '$from' overlaps a single byte definition.";
+      }
     }
     else {
       $b1 = $byte1[$f1val] = [];
@@ -90,13 +101,18 @@ while (<$map>) {
 
 close($map);
 
-die "Minpos never set" unless $minpos < 256;
+if (not $minpos < 256) {
+  $! = 7;
+  die "Minpos never set";
+}
 
 print "<encmap name='$name'>\n";
 
 process_byte(2, $minpos, \@byte1);
 
 print "</encmap>\n";
+
+exit 0;
 
 ####
 ## End main
@@ -169,34 +185,58 @@ make_encmap - create an XML representation from an Unicode mapping file
 
 =head1 SYNOPSIS
 
-B<make_encmap> I<name> I<file>
+    make_encmap <name> <file>
 
 =head1 DESCRIPTION
 
 B<make_encmap> creates a XML encmap file with a given name from an Unicode
-mapping file, received e.g. from L<ftp://ftp.unicode.org>. The result by default
-is output to F<stdout>.
+mapping file, received e.g. from L<ftp://ftp.unicode.org>.  The result by
+default is output to F<stdout>.
+
+=head1 ARGUMENTS
+
+=over 4
+
+=item E<lt>nameE<gt>
+
+The name to set in the XML encmap file created.
+
+=item E<lt>fileE<gt>
+
+The Unicode mapping file to create the XML encmap file from.
+
+=back
 
 =head1 OPTIONS
 
-There are no options you can use.
+I<None>.
 
 =head1 EXAMPLES
 
 The following example shows the usage of B<make_encmap> for the ISO/IEC 8859-15
 table.
 
-B<
     wget ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-15.TXT
     make_encmap 8859-15 8859-15.TXT E<gt> 8859-15.encmap
->
+
+=head1 EXIT STATUS
+
+    0   The script exited normally.
+
+    2   Invalid command-line arguments.
+
+    >2  An error occurred.
+
+=head1 KNOWN BUGS
+
+I<None>.
 
 =head1 SEE ALSO
 
 L<compile_encoding(1)>,
-L<XML::Encoding(3pm)>
+L<XML::Encoding(3pm)>.
 
-=head1 AUTHORS
+=head1 AUTHOR
 
 Clark Cooper E<lt>L<coopercc@netheaven.com|mailto:coopercc@netheaven.com>E<gt>.
 
@@ -207,10 +247,27 @@ This manual page was written by Daniel Leidert
 E<lt>L<daniel.leidert@wgdd.de|mailto:daniel.leidert@wgdd.de>E<gt> for the Debian
 project (but may be used by others).
 
+=head1 COPYRIGHT
+
+Copyright (C) 1998 Clark Cooper.  All rights reserved.
+Copyright (C) 2008-2009, 2014 Steve Hay.  All rights reserved.
+
 =head1 LICENCE
 
 This script is free software; you can redistribute it and/or modify it under the
 same terms as Perl itself, i.e. under the terms of either the GNU General Public
 License or the Artistic License, as specified in the F<LICENCE> file.
+
+=head1 VERSION
+
+Version 2.10
+
+=head1 DATE
+
+TODO
+
+=head1 HISTORY
+
+See the F<Changes> file.
 
 =cut
