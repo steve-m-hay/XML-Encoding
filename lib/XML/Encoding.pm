@@ -303,8 +303,6 @@ L<perlmodlib/"CPAN"> for details) at
 
 L<https://metacpan.org/release/XML-Encoding> or
 
-L<http://search.cpan.org/dist/XML-Encoding/> or
-
 L<http://www.cpan.org/authors/id/S/SH/SHAY/> or
 
 L<http://www.cpan.org/modules/by-module/XML/>.
