@@ -325,7 +325,7 @@ XML::Encoding as of version 2.00.
 
 Copyright (C) 1998 Clark Cooper.  All rights reserved.
 
-Copyright (C) 2007-2010, 2014 Steve Hay.  All rights reserved.
+Copyright (C) 2007-2010, 2014, 2020 Steve Hay.  All rights reserved.
 
 =head1 LICENCE
 
