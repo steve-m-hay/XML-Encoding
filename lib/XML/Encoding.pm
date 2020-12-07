@@ -335,11 +335,11 @@ License or the Artistic License, as specified in the F<LICENCE> file.
 
 =head1 VERSION
 
-Version 2.10
+Version 2.11
 
 =head1 DATE
 
-07 Dec 2020
+TODO
 
 =head1 HISTORY
 
