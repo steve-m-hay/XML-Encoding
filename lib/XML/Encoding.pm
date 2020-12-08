@@ -21,7 +21,7 @@ use strict;
 use warnings;
 
 our @ISA = qw(XML::Parser);
-our $VERSION = '2.11';
+our $VERSION = '2.12';
 
 sub new {
   my $class = shift;
@@ -335,11 +335,11 @@ License or the Artistic License, as specified in the F<LICENCE> file.
 
 =head1 VERSION
 
-Version 2.11
+Version 2.12
 
 =head1 DATE
 
-08 Dec 2020
+TODO
 
 =head1 HISTORY
 
