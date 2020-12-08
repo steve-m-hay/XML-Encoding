@@ -21,7 +21,7 @@ use strict;
 use warnings;
 
 our @ISA = qw(XML::Parser);
-our $VERSION = '2.10';
+our $VERSION = '2.11';
 
 sub new {
   my $class = shift;
