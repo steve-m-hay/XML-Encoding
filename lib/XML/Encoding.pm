@@ -289,9 +289,6 @@ L<https://www.cpantesters.org/> for details of how to get involved.
 Previous test results on CPAN Testers Reports can be viewed at
 L<https://www.cpantesters.org/distro/X/XML-Encoding.html>.
 
-Please rate this distribution on CPAN Ratings at
-L<https://cpanratings.perl.org/rate/?distribution=XML-Encoding>.
-
 =head1 SEE ALSO
 
 L<XML::Parser>.
